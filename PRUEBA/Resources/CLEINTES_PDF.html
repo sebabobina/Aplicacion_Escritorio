@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+Table.border {
+    border-collapse:collapse;
+}
+    Table.border th{
+        padding:5px;
+        border:1px solid black;
+        
+    }
+     Table.border td{
+        padding:5px;
+        border:1px solid black;
+        
+    }
+    
+</style>
+</head>
+<body>
+
+    <table style="width:100%">
+
+        <tr>
+            <td style="width:20%"></td>
+            <td style="width:60%" align="center">
+                <table>
+                    <tr> <td align="center">CODIGO ESTUDIANTE</td> </tr>
+                    <tr> <td align="center">Direccion: av. prueba 123</td> </tr>
+                    <tr> <td align="center">Telefono: 123123123</td> </tr>
+
+                </table>
+            </td>
+            <td style="width:20%">
+                <table class="border" style="width:100%">
+                    <tr> <td align="center">RUT: 32323232</td> </tr>
+                    <tr> <td align="center">BOLETA</td> </tr>
+                    <tr> <td align="center">NRO: 00000121</td> </tr>
+
+                </table>
+
+
+
+            </td>
+
+
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+
+
+
+        <tr>
+            <td colspan="2">
+                <table style="width:100%">
+                    <tr>
+                        <td colspan="1" style="width:50%">RUT:</td>
+                        <td colspan="1" style="width:50%;border-bottom:1px solid black"><h5>@RUT</h5></td>
+                        <td colspan="1" style="width:40%">Nombre:</td>
+                        <td colspan="1" style="width:50%;border-bottom:1px solid black"><h5>@NOMBRE</h5></td>
+                        <td colspan="1" style="width:40%">Email:</td>
+                        <td colspan="1" style="width:50%;border-bottom:1px solid black"><h5>@EMAIL</h5></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="width:40%">Direccion:</td>
+                        <td colspan="1" style="width:50%;border-bottom:1px solid black"><h5>@DIRECCION</h5></td>
+                        <td colspan="1" style="width:40%">Comuna:</td>
+                        <td colspan="1" style="width:40%;border-bottom:1px solid black"><h5>@COMUNA</h5></td>
+                        <td colspan="1" style="width:40%">Telefono:</td>
+                        <td colspan="1" style="width:40%;border-bottom:1px solid black"><h5>@TELEFONO</h5></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="width:20%">Rubro:</td>
+                        <td colspan="1" style="width:30%;border-bottom:1px solid black"><h5>@RUBRO</h5></td>
+                    </tr>
+
+                </table>
+
+
+            </td>
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Credenciales</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Empresa</th>
+                            <th>ID Usuario</th>
+                            <th>Nombre Usuario</th>
+                            <th>Contraseña</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@IDEMP</td>
+                            <td>@ID_USR</td>
+                            <td>@USERNAME</td>
+                            <td>@PASS</td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Profesional a Cargo</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Profesional</th>
+                            <th>ID Usuario</th>
+                            <th>RUT Profesional</th>
+                            <th>Nombre Profesional</th>
+                            <th>Profesion</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@ID_PROF</td>
+                            <td>@IDUSR_PROF</td>
+                            <td>@RUPROF</td>
+                            <td>@NOMPROF</td>
+                            <td>@PROFESION</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Fecha Visitas</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Fecha Primera Visita</th>
+                            <th>Hora Primera Visita</th>
+                            <th>Fecha Segunda Visita</th>
+                            <th>Hora Segunda Visita</th>
+                            <th>Mes</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+    <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @FILAS
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Capacitaciones</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Nombre Capacitacion</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Asistentes</th>
+
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+      <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+
+                        @CAPACITACIONES
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Asesorias</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Asesoria</th>
+                            <th>Descripcion</th>
+                            <th>ID Propuesta</th>
+                            <th>Propuesta Mejora</th>
+                            <th>Estado Mejora</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+      <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @ASESORIAS
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Lista de Chequeo</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Chequeo</th>
+                            <th>Descripcion</th>
+                            <th>Estado</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @LISTACHEQUEO
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Accidentes</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Accidente</th>
+                            <th>Descripcion Accidente</th>
+                            <th>Fecha Accidente</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+      <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @ACCIDENTES
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Historial</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Actividad Realizada</th>
+                            <th>Fecha Actividad</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+          <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @HISTORIAL
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">Pagos</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Actividad Realizada</th>
+                            <th>Fecha Actividad</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+
+    </table>
+
+</body>
+</html>

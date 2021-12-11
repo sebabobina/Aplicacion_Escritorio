@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        Table.border {
+            border-collapse: collapse;
+        }
+
+            Table.border th {
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            Table.border td {
+                padding: 5px;
+                border: 1px solid black;
+            }
+    </style>
+</head>
+<body>
+
+    <table style="width:100%">
+
+        <tr>
+            <td style="width:20%"></td>
+            <td style="width:60%" align="center">
+                <table>
+                    <tr> <td align="center">BIG BRO</td> </tr>
+                    <tr> <td align="center">REPORTE GLOBAL</td> </tr>
+                    <tr> <td align="center"></td> </tr>
+
+                </table>
+            </td>
+            <td style="width:20%">
+                <table class="border" style="width:100%">
+                    <tr> <td align="center"> </td> </tr>
+                    <tr> <td align="center"> </td> </tr>
+                    <tr> <td align="center"> </td> </tr>
+
+                </table>
+
+
+
+            </td>
+
+
+
+        </tr>
+
+        
+
+
+
+        
+
+
+        
+
+        
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">ADMINISTRADORES</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            
+                            <th>ID Admin</th>
+                            <th>RUT</th>
+                            <th>Nombre Admin</th>
+                            <th>Comuna</th>
+                            <th>Email</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                            <td>@FECHA2</td>
+                            <td>@HORA2</td>
+                            <td>@PMES</td>
+
+                        </tr>-->
+                        @ADMIN
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">PROFESIONALES REGISTRADOS</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Profesional</th>
+                            <th>Nombre</th>
+                            <th>Rut</th>
+                            <th>Profesion</th>
+                            <th>Email</th>
+
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+        <td>@FECHA1</td>
+        <td>@HORA1</td>
+        <td>@FECHA2</td>
+        <td>@HORA2</td>
+        <td>@PMES</td>
+
+    </tr>-->
+                        @PROF
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">EMPRESAS REGISTRADAS</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>ID Empresa</th>
+                            <th>Nombre Empresa</th>
+                            <th>Rut Empresa</th>
+                            <th>Rubro</th>
+                            <th>Email</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                            <td>@FECHA2</td>
+                            <td>@HORA2</td>
+                            <td>@PMES</td>
+
+                        </tr>-->
+                        @REGISTRADAS
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">CAPACITACIONES DEL MES</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Nombre Empresa </th>
+                            <th>Capacitacion</th>
+                            <th>Profesional a cargo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Asistentes</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                            <td>@FECHA2</td>
+                            <td>@HORA2</td>
+                            <td>@PMES</td>
+
+                        </tr>-->
+                        @CAPACITACIONES
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">ASESORIAS</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Empresa</th>
+                            <th>Asesoria</th>
+                            <th>Propuesta de mejora</th>
+                            <th>Estado Mejora</th>
+                            <th>Profesional a cargo</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                            <td>@FECHA2</td>
+                            <td>@HORA2</td>
+                            <td>@PMES</td>
+
+                        </tr>-->
+                        @ASESORIAS
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">VISITAS DEL MES</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Nombre Empresa</th>
+                            <th>Mes</th>
+                            <th>Fecha Visita 1 </th>
+                            <th>Hora </th>
+                            <th>Fecha Visita 2</th>
+                            <th>Hora</th>
+                            <th>Profesional a cargo</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>@FECHA1</td>
+                            <td>@HORA1</td>
+                            <td>@FECHA2</td>
+                            <td>@HORA2</td>
+                            <td>@PMES</td>
+
+                        </tr>-->
+                        @VISITAS
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr><td colspan="3" height="20"></td> </tr>
+        <tr><td colspan="3" height="20">PAGOS DEL MES</td> </tr>
+        <tr><td colspan="3" height="20"></td> </tr>
+
+        <tr>
+
+            <td colspan="3">
+                <table class="border" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #D8D8D8">
+
+                            <th>Nombre Empresa</th>
+                            <th>Fecha Facturacion</th>
+                            <th>Monto a Pagar</th>
+                            <th>Estado Pago</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        
+                        @PAGOS
+
+                    </tbody>
+                </table>
+            </td>
+
+        </tr>
+
+
+
+    </table>
+
+</body>
+</html>

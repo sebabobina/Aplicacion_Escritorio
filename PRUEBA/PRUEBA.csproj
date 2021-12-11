@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2814535C-23F3-4FF5-97E0-8F5710AAE027}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PRUEBA</RootNamespace>
+    <AssemblyName>PRUEBA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Admin\ADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\ADMIN.Designer.cs">
+      <DependentUpon>ADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Asesorias\Administrar Asesorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Asesorias\Administrar Asesorias.Designer.cs">
+      <DependentUpon>Administrar Asesorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Asesorias\Asesorias_por_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Asesorias\Asesorias_por_Cliente.Designer.cs">
+      <DependentUpon>Asesorias_por_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Capacitaciones\Administrar Capacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Capacitaciones\Administrar Capacitaciones.Designer.cs">
+      <DependentUpon>Administrar Capacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Capacitaciones\Capacitacion_por_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Capacitaciones\Capacitacion_por_cliente.Designer.cs">
+      <DependentUpon>Capacitacion_por_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Actividad Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Actividad Clientes.Designer.cs">
+      <DependentUpon>Actividad Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Elegir Empresa Accidentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Elegir Empresa Accidentes.Designer.cs">
+      <DependentUpon>Elegir Empresa Accidentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Pagos Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Pagos Clientes.Designer.cs">
+      <DependentUpon>Pagos Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver Accidentes Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver Accidentes Clientes.Designer.cs">
+      <DependentUpon>Ver Accidentes Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver Actividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver Actividad.Designer.cs">
+      <DependentUpon>Ver Actividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Ver_Pagos.Designer.cs">
+      <DependentUpon>Ver_Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Actividades Profesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Actividades Profesional.Designer.cs">
+      <DependentUpon>Actividades Profesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Administrar Profesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Administrar Profesional.Designer.cs">
+      <DependentUpon>Administrar Profesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Añadir Profesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Añadir Profesional.Designer.cs">
+      <DependentUpon>Añadir Profesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Empresas a cargo .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Empresas a cargo .Designer.cs">
+      <DependentUpon>Empresas a cargo .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Modifcar_Profesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Profesional\Modifcar_Profesional.Designer.cs">
+      <DependentUpon>Modifcar_Profesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Reportes\Reporte Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Reportes\Reporte Cliente.Designer.cs">
+      <DependentUpon>Reporte Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Reportes\Reporte Global.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Reportes\Reporte Global.Designer.cs">
+      <DependentUpon>Reporte Global.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Accidentes\Mostrar_Accidentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Accidentes\Mostrar_Accidentes.Designer.cs">
+      <DependentUpon>Mostrar_Accidentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Accidentes\Reportar Accidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Accidentes\Reportar Accidente.Designer.cs">
+      <DependentUpon>Reportar Accidente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Asesoria Especial\Asesoria_Especial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Asesoria Especial\Asesoria_Especial.Designer.cs">
+      <DependentUpon>Asesoria_Especial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Asesoria Especial\Revisar_Asesoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Asesoria Especial\Revisar_Asesoria.Designer.cs">
+      <DependentUpon>Revisar_Asesoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Capacitaciones\Revisar_capacitacion_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Capacitaciones\Revisar_capacitacion_cliente.Designer.cs">
+      <DependentUpon>Revisar_capacitacion_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar Contrato.Designer.cs">
+      <DependentUpon>Revisar Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar Pagos.Designer.cs">
+      <DependentUpon>Revisar Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar_Fechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Contrato\Revisar_Fechas.Designer.cs">
+      <DependentUpon>Revisar_Fechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\Revisar_capacitacion_clientes.cs" />
+    <Compile Include="Interfaces\Profesional\Asesorias\Agregar_Estado_Mejora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Agregar_Estado_Mejora.Designer.cs">
+      <DependentUpon>Agregar_Estado_Mejora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Crear_Asesoriaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Crear_Asesoriaa.Designer.cs">
+      <DependentUpon>Crear_Asesoriaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Elegir_Empresa_Asesoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Elegir_Empresa_Asesoria.Designer.cs">
+      <DependentUpon>Elegir_Empresa_Asesoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Lista_Revisar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Lista_Revisar_Cliente.Designer.cs">
+      <DependentUpon>Lista_Revisar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Agregar a Checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Agregar a Checklist.Designer.cs">
+      <DependentUpon>Agregar a Checklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Login\agregar_datos_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Login\agregar_datos_emp.Designer.cs">
+      <DependentUpon>agregar_datos_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Capacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Capacitaciones.Designer.cs">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Check_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Check_List.Designer.cs">
+      <DependentUpon>Check_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Crear Capacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Crear Capacitacion.Designer.cs">
+      <DependentUpon>Crear Capacitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Elegir_Cliente_Visita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Elegir_Cliente_Visita.Designer.cs">
+      <DependentUpon>Elegir_Cliente_Visita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\EMPRESA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cliente\EMPRESA.Designer.cs">
+      <DependentUpon>EMPRESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Fecha.Designer.cs">
+      <DependentUpon>Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Administrar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Administrar_Cliente.Designer.cs">
+      <DependentUpon>Administrar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Login\Login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Login\Login2.Designer.cs">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Modificar_Capacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Modificar_Capacitacion.Designer.cs">
+      <DependentUpon>Modificar_Capacitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Modificar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Modificar_Cliente.Designer.cs">
+      <DependentUpon>Modificar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Asesorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Asesorias.Designer.cs">
+      <DependentUpon>Asesorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Estado Asesoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Asesorias\Estado Asesoria.Designer.cs">
+      <DependentUpon>Estado Asesoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\PROF_ACCIDENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\PROF_ACCIDENTES.Designer.cs">
+      <DependentUpon>PROF_ACCIDENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar_Accidentes_PROF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar_Accidentes_PROF.Designer.cs">
+      <DependentUpon>Revisar_Accidentes_PROF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\PROFESIONAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\PROFESIONAL.Designer.cs">
+      <DependentUpon>PROFESIONAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\Admin\Cliente\Registrar_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Admin\Cliente\Registrar_Clientes.Designer.cs">
+      <DependentUpon>Registrar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar CheckList.Designer.cs">
+      <DependentUpon>Revisar CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar Visitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar Visitas.Designer.cs">
+      <DependentUpon>Revisar Visitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Revisar_Capacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Capacitaciones\Revisar_Capacitaciones.Designer.cs">
+      <DependentUpon>Revisar_Capacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar_Clientes_PROF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Profesional\Cliente\Revisar_Clientes_PROF.Designer.cs">
+      <DependentUpon>Revisar_Clientes_PROF.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Interfaces\Admin\ADMIN.resx">
+      <DependentUpon>ADMIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Asesorias\Administrar Asesorias.resx">
+      <DependentUpon>Administrar Asesorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Asesorias\Asesorias_por_Cliente.resx">
+      <DependentUpon>Asesorias_por_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Capacitaciones\Administrar Capacitaciones.resx">
+      <DependentUpon>Administrar Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Capacitaciones\Capacitacion_por_cliente.resx">
+      <DependentUpon>Capacitacion_por_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Actividad Clientes.resx">
+      <DependentUpon>Actividad Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Elegir Empresa Accidentes.resx">
+      <DependentUpon>Elegir Empresa Accidentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Pagos Clientes.resx">
+      <DependentUpon>Pagos Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Ver Accidentes Clientes.resx">
+      <DependentUpon>Ver Accidentes Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Ver Actividad.resx">
+      <DependentUpon>Ver Actividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Ver_Pagos.resx">
+      <DependentUpon>Ver_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Profesional\Administrar Profesional.resx">
+      <DependentUpon>Administrar Profesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Profesional\Añadir Profesional.resx">
+      <DependentUpon>Añadir Profesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Profesional\Empresas a cargo .resx">
+      <DependentUpon>Empresas a cargo .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Profesional\Modifcar_Profesional.resx">
+      <DependentUpon>Modifcar_Profesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Reportes\Reporte Cliente.resx">
+      <DependentUpon>Reporte Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Reportes\Reporte Global.resx">
+      <DependentUpon>Reporte Global.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Accidentes\Mostrar_Accidentes.resx">
+      <DependentUpon>Mostrar_Accidentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Accidentes\Reportar Accidente.resx">
+      <DependentUpon>Reportar Accidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Asesoria Especial\Asesoria_Especial.resx">
+      <DependentUpon>Asesoria_Especial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Asesoria Especial\Revisar_Asesoria.resx">
+      <DependentUpon>Revisar_Asesoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Capacitaciones\Revisar_capacitacion_cliente.resx">
+      <DependentUpon>Revisar_capacitacion_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Contrato\Revisar Contrato.resx">
+      <DependentUpon>Revisar Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Contrato\Revisar Pagos.resx">
+      <DependentUpon>Revisar Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\Contrato\Revisar_Fechas.resx">
+      <DependentUpon>Revisar_Fechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Asesorias\Agregar_Estado_Mejora.resx">
+      <DependentUpon>Agregar_Estado_Mejora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Asesorias\Crear_Asesoriaa.resx">
+      <DependentUpon>Crear_Asesoriaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Asesorias\Elegir_Empresa_Asesoria.resx">
+      <DependentUpon>Elegir_Empresa_Asesoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Capacitaciones\Lista_Revisar_Cliente.resx">
+      <DependentUpon>Lista_Revisar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Agregar a Checklist.resx">
+      <DependentUpon>Agregar a Checklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Login\agregar_datos_emp.resx">
+      <DependentUpon>agregar_datos_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Capacitaciones\Capacitaciones.resx">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Check_List.resx">
+      <DependentUpon>Check_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Capacitaciones\Crear Capacitacion.resx">
+      <DependentUpon>Crear Capacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Elegir_Cliente_Visita.resx">
+      <DependentUpon>Elegir_Cliente_Visita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Cliente\EMPRESA.resx">
+      <DependentUpon>EMPRESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Fecha.resx">
+      <DependentUpon>Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Administrar_Cliente.resx">
+      <DependentUpon>Administrar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Login\Login2.resx">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Capacitaciones\Modificar_Capacitacion.resx">
+      <DependentUpon>Modificar_Capacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Modificar_Cliente.resx">
+      <DependentUpon>Modificar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Asesorias\Asesorias.resx">
+      <DependentUpon>Asesorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Asesorias\Estado Asesoria.resx">
+      <DependentUpon>Estado Asesoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\PROF_ACCIDENTES.resx">
+      <DependentUpon>PROF_ACCIDENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Revisar_Accidentes_PROF.resx">
+      <DependentUpon>Revisar_Accidentes_PROF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\PROFESIONAL.resx">
+      <DependentUpon>PROFESIONAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Interfaces\Admin\Cliente\Registrar_Clientes.resx">
+      <DependentUpon>Registrar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Revisar CheckList.resx">
+      <DependentUpon>Revisar CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Revisar Visitas.resx">
+      <DependentUpon>Revisar Visitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Capacitaciones\Revisar_Capacitaciones.resx">
+      <DependentUpon>Revisar_Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Profesional\Cliente\Revisar_Clientes_PROF.resx">
+      <DependentUpon>Revisar_Clientes_PROF.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-abstracto-poligonal-azul_1394-1155.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80886.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\793aeedbe2ee515afb82c25200bcb19d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLEINTES_PDF.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte_global.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
